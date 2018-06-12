@@ -12,5 +12,9 @@ process.stdin.on('data', data => {
     const pwd = require('./pwd');
     pwd();
     process.stdout.write('\nprompt > ');
+  } else if (cmd === 'ls') {
+    const ls = require('./ls');
+    ls();
+    process.stdout.write('\nprompt > ');
   }
 });
